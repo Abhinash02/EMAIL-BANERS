@@ -1,0 +1,97 @@
+EJS Email Template Viewer
+A simple and efficient Node.js and Express server designed to dynamically render and preview multiple EJS email templates. This tool is perfect for developing and testing email templates before integrating them into a larger application.
+
+✨ Features
+Dynamic Template Discovery: Automatically detects and lists all .ejs templates placed in the views directory.
+
+Centralized Data: Uses a single, universal JavaScript object (templateData) in server.js to populate all templates with sample data.
+
+Homepage Index: Generates a clean, clickable list of all available templates on the root URL (/) for easy navigation.
+
+Simple & Scalable: Add a new template by simply creating a new .ejs file and adding its required data to the server—no routing changes are needed.
+
+📁 Project Structure
+Your project should be organized with the following file structure for the server to work correctly:
+
+/your-project-folder
+|
+|-- server.js           # The main Express server file
+|-- package.json        # Project dependencies and scripts
+|-- README.md           # The file you are reading now
+|
+|-- /views              # Folder containing all your EJS templates
+|   |-- booking_successful.ejs
+|   |-- cab_booking.ejs
+|   |-- gift_card.ejs
+|   |-- otp_reset.ejs
+|   |-- promotional_email.ejs
+|   |-- schedule_meeting.ejs
+|   |-- site_visit.ejs
+|   `-- (add more .ejs files here)
+|
+`-- /public             # (Optional) For static assets like CSS or images
+
+
+🚀 Installation & Setup
+Follow these steps to get the project running on your local machine.
+
+Prerequisites
+Make sure you have Node.js and npm (which comes with Node.js) installed on your system.
+
+Steps
+Set up the project folder with the structure shown above.
+
+Create your package.json file. If you don't have one, you can create it by running npm init -y in your terminal or by creating the file manually with the following content:
+
+{
+  "name": "ejs-template-viewer",
+  "version": "1.0.0",
+  "description": "A server to preview EJS email templates.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
+
+
+Install dependencies. Open your terminal in the project's root directory and run:
+
+npm install
+
+
+▶️ How to Run the Server
+Start the server by running the following command in your terminal:
+
+node server.js
+
+
+Alternatively, if you set up the package.json script, you can use:
+
+npm start
+
+
+View your templates. Open your web browser and navigate to:
+
+http://localhost:7000 to see the homepage with a list of all your templates.
+
+http://localhost:7000/template/template_name to view a specific template (e.g., http://localhost:7000/template/promotional_email).
+
+📝 How to Add a New Template
+Adding a new email template is very easy:
+
+Create the EJS File: Create your new template file (e.g., new_promo.ejs) and save it inside the /views directory.
+
+Add Sample Data: Open server.js and add any new data variables that your template requires to the templateData object.
+
+// server.js
+const templateData = {
+    // ... all existing data
+
+    // Data for your new template
+    promoCode: "SUMMER25",
+    saleEndDate: "September 30, 2025"
+};
