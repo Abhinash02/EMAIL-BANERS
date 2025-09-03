@@ -95,3 +95,5 @@ const templateData = {
     promoCode: "SUMMER25",
     saleEndDate: "September 30, 2025"
 };
+
+Restart & View: Stop the server (Ctrl + C in the terminal) and restart it (node server.js). Your new template will now automatically appear on the homepage.
