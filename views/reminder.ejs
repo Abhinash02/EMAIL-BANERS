@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Reminder</title>
+    <style>
+      /* Responsive Styles */
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+          padding: 10px !important;
+        }
+        .content-padding {
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+        }
+        .hero-image {
+          width: 100% !important;
+          height: auto !important;
+        }
+        .button-link {
+          padding: 12px 25px !important;
+        }
+        .footer-links-cell {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+          padding: 5px 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #5e5e5e;
+      font-family: Arial, Helvetica, sans-serif;
+    "
+  >
+    <table
+      width="100%"
+      border="0"
+      cellspacing="0"
+      cellpadding="0"
+      style="background-color: #5e5e5e"
+    >
+      <tr>
+        <td align="center">
+          <!-- Main Container -->
+          <table
+            class="container"
+            width="600"
+            border="0"
+            cellspacing="0"
+            cellpadding="20"
+            style="
+              background-color: #ffffff;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            "
+          >
+            <!-- Logo -->
+            <tr>
+              <td align="center" style="padding: 10px 0 20px 0">
+                <img
+                  src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756795010079_LOGO_image%201.png"
+                  alt="Mr. Proptek Logo"
+                  width="120"
+                />
+              </td>
+            </tr>
+
+            <!-- Hero Image -->
+            <tr>
+              <td
+                class="content-padding"
+                align="center"
+                style="padding: 0 30px 20px 30px"
+              >
+                <img
+                  src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756795197188_BANNER_Bannerimage.png"
+                  alt="Mr. Proptek Banner"
+                  class="hero-image"
+                  style="width: 100%; display: block; border-radius: 8px"
+                />
+              </td>
+            </tr>
+
+            <!-- Main Content -->
+            <tr>
+              <td class="content-padding" style="padding: 0 30px">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <!-- Greeting -->
+                  <tr>
+                    <td
+                      style="
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: #1e293b;
+                        padding-bottom: 20px;
+                      "
+                    >
+                      Hi <%= name %>,
+                    </td>
+                  </tr>
+                  <!-- Body Text -->
+                  <tr>
+                    <td
+                      style="
+                        font-size: 14px;
+                        color: #334155;
+                        padding-bottom: 20px;
+                        line-height: 1.6;
+                      "
+                    >
+                      This is a reminder that the event
+                      <strong style="color: #082572"><%= eventName %></strong>
+                      is live now!
+                    </td>
+                  </tr>
+
+                  <!-- Button -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 25px">
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td
+                            align="center"
+                            style="
+                              border-radius: 8px;
+                              background-color: #082572;
+                            "
+                          >
+                            <a
+                              href="<%= appLink %>"
+                              target="_blank"
+                              class="button-link"
+                              style="
+                                padding: 15px 30px;
+                                font-size: 16px;
+                                color: #ffffff;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-weight: bold;
+                              "
+                              >Go to Event</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Closing -->
+                  <tr>
+                    <td
+                      style="
+                        font-size: 14px;
+                        color: #334155;
+                        padding-bottom: 20px;
+                        line-height: 1.6;
+                      "
+                    >
+                      Thank you for watching and stay with us for more events.
+                    </td>
+                  </tr>
+                  <!-- Signature -->
+                  <tr>
+                    <td
+                      style="font-size: 14px; color: #334155; line-height: 1.5"
+                    >
+                      Best Regards,<br />
+                      <strong style="color: #082572">Mr. Proptek Team</strong>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td class="content-padding" style="padding: 30px 30px 30px 30px">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <!-- Top Line -->
+                  <tr>
+                    <td style="padding-bottom: 15px">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tr>
+                          <td style="border-bottom: 1px solid #e2e8f0"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- Social Icons -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 15px">
+                      <a
+                        href="https://www.instagram.com/mrproptek_official/?hl=en"
+                        style="text-decoration: none; margin: 0 8px"
+                        ><img
+                          src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756797699335_INSTA_ICON_Insta_icon.png"
+                          alt="Instagram"
+                          width="36"
+                      /></a>
+                      <a
+                        href="https://www.facebook.com/mrproptek/"
+                        style="text-decoration: none; margin: 0 8px"
+                        ><img
+                          src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756797853381_FACEBOOK_ICON_facebook_icon.png"
+                          alt="Facebook"
+                          width="36"
+                      /></a>
+                      <a
+                        href="https://www.youtube.com/@MrProptek/"
+                        style="text-decoration: none; margin: 0 8px"
+                        ><img
+                          src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756797585808_YOUTUBE_ICON_youtube_icon.png"
+                          alt="You Tube"
+                          width="36"
+                      /></a>
+
+                      <a
+                        href="https://in.linkedin.com/company/mrproptek"
+                        style="text-decoration: none; margin: 0 8px"
+                        ><img
+                          src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756797662425_LINKDIN_ICON_linkedin_icon.png"
+                          alt="LinkedIn"
+                          width="36"
+                      /></a>
+                       <a
+                        href="https://x.com/mrproptek"
+                        style="text-decoration: none; margin: 0 8px"
+                        ><img
+                          src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756802843324_TWITTER_ICON_Group%201597883717.png"
+                          alt="Twitter"
+                          width="36"
+                      /></a>
+                    </td>
+                  </tr>
+                  <!-- Bottom Line -->
+                  <tr>
+                    <td style="padding-bottom: 10px">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tr>
+                          <td style="border-bottom: 1px solid #e2e8f0"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- Copyright -->
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-size: 12px;
+                        color: #64748b;
+                        line-height: 1.6;
+                        padding-top: 10px;
+                      "
+                    >
+                      &copy; 2025 MrProptek. All rights reserved.
+                    </td>
+                  </tr>
+                  <!-- Disclaimer -->
+                  <tr>
+                    <td
+                      align="center"
+                      style="
+                        font-size: 12px;
+                        color: #64748b;
+                        line-height: 1.6;
+                        padding: 15px 0;
+                      "
+                    >
+                      You are receiving this mail because you registered to join
+                      the Mr. Proptek platform as a user or a creator. This also
+                      shows that you agree to our Terms of use and Privacy
+                      Policies.
+                    </td>
+                  </tr>
+
+                  <!-- Footer Links -->
+                  <tr>
+                    <td
+                      style="
+                        font-size: 12px;
+                        padding-top: 5px;
+                        padding-bottom: 10px;
+                      "
+                    >
+                      <table
+                        width="100%"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tr>
+                          <td align="center" style="padding: 5px">
+                            <a
+                              href="https://mrproptek.com/refund-policy"
+                              style="
+                                color: #475569;
+                                text-decoration: underline;
+                                white-space: nowrap;
+                              "
+                              >Privacy policy</a
+                            >
+                          </td>
+                          <td align="center" style="padding: 5px">
+                            <a
+                              href="https://mrproptek.com/terms-and-conditions"
+                              style="
+                                color: #475569;
+                                text-decoration: underline;
+                                white-space: nowrap;
+                              "
+                              >Terms of service</a
+                            >
+                          </td>
+                          <td align="center" style="padding: 5px">
+                            <a
+                              href="https://mrproptek.com/contact"
+                              style="
+                                color: #475569;
+                                text-decoration: underline;
+                                white-space: nowrap;
+                              "
+                              >Contact Us</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

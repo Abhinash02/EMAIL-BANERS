@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Confirmation</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      background: #f2f2f2; 
+      margin: 0; 
+      padding: 0; 
+    }
+    .container { 
+      width: 85%; 
+      margin: 40px auto; 
+      background: #fff; 
+      border-radius: 6px; 
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1); 
+    }
+    .header { 
+      text-align: center; 
+      padding: 20px; 
+    }
+    .header img { 
+      height: 60px; 
+      width: auto; 
+    }
+    .banner { 
+      display: block;
+      width: 95%;   
+      margin: 0 auto;   
+      border-radius: 6px; 
+    }
+    .content { 
+      padding: 30px; 
+      font-size: 15px; 
+      color: #333; 
+    }
+    .content h2 { 
+      margin: 0 0 15px; 
+      font-size: 20px; 
+    }
+    .content p { 
+      margin: 10px 0; 
+      line-height: 1.6; 
+    }
+    .box { 
+      background: #f9f9f9; 
+      border: 1px solid #ddd; 
+      padding: 15px; 
+      margin: 20px 0; 
+      border-radius: 6px; 
+    }
+    .box h3 { 
+      margin-top: 0; 
+      font-size: 16px; 
+    }
+    .price-table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin: 15px 0; 
+    }
+    .price-table td { 
+      padding: 6px 4px; 
+      font-size: 14px; 
+    }
+    .price-table td:last-child { 
+      text-align: right; 
+    }
+    .highlight { 
+      font-weight: bold; 
+      color: #1a4de8; 
+    }
+    .footer { 
+      text-align: center; 
+      font-size: 12px; 
+      color: #777; 
+      padding: 20px; 
+      background: #fafafa; 
+    }
+    .social-icons img { 
+      margin: 0 5px; 
+      height: 22px; 
+    }
+    a { 
+      color: #1a4de8; 
+      text-decoration: none; 
+    }
+
+    @media (max-width: 768px) {
+      .container { 
+        width: 95%; 
+        margin: 20px auto; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756795010079_LOGO_image%201.png" alt="Mr. Proptek">
+    </div>
+
+    <img src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756795197188_BANNER_Bannerimage.png" alt="Banner" class="banner">
+
+    <div class="content">
+      <h2>Hi <%= username %>,</h2>
+      <p>Congratulations 🎉 Your booking with MrProptek has been successfully completed.</p>
+
+      <div class="box">
+        <h3>Here are your booking details:</h3>
+        <p><b>Property:</b> <%= propertyName %></p>
+        <p><b>Possession:</b> <%= possessionDate %></p>
+        <p><b>Unit:</b> <%= unitDetails %></p>
+        <p><b>Preferences:</b> <%= preferences %></p>
+      </div>
+
+      <div class="box">
+        <h3>Basic Selling Price:</h3>
+        <table class="price-table">
+          <tr><td>Base Selling Price</td><td>₹<%= basicPrice %></td></tr>
+          <tr><td>Preferential Location Charges</td><td>₹<%= plc %></td></tr>
+          <tr><td>Gift Card Applied</td><td>-₹<%= giftCard %></td></tr>
+          <tr><td>Coupon Discount</td><td>-₹<%= coupon %></td></tr>
+          <tr><td>Waiver</td><td>-₹<%= waiver %></td></tr>
+          <tr><td>Taxes</td><td>₹<%= taxes %></td></tr>
+          <tr><td><b>Total Amount:</b></td><td><b>₹<%= totalAmount %></b></td></tr>
+          <tr><td><b>Booking Amount Paid:</b></td><td class="highlight">₹<%= bookingAmount %> (Inclusive of GST)</td></tr>
+        </table>
+      </div>
+
+      <p>Your property is now on hold. Please complete the remaining payment within 48 hours to confirm ownership.</p>
+      <p>A dedicated payment executive from MrProptek will assist you through the entire payment process.</p>
+      <p>Thank you for trusting MrProptek. We're excited to help you move closer to your dream property.</p>
+
+      <p>Best Regards,<br><b class="highlight">Mr. Proptek Team</b></p>
+    </div>
+
+    <div class="footer">
+      <div class="social-icons">
+          
+                      <a href="https://www.instagram.com/mrproptek_official/?hl=en" style="text-decoration: none; margin: 0 8px"><img src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756797699335_INSTA_ICON_Insta_icon.png" alt="Instagram" width="36" /></a>
+                      <a href="https://www.facebook.com/mrproptek/" style="text-decoration: none; margin: 0 8px"><img src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756797853381_FACEBOOK_ICON_facebook_icon.png" alt="Facebook" width="36" /></a>
+                      <a href="https://www.youtube.com/@MrProptek/" style="text-decoration: none; margin: 0 8px"><img src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756797585808_YOUTUBE_ICON_youtube_icon.png" alt="You Tube" width="36" /></a>
+                      <a href="https://x.com/mrproptek" style="text-decoration: none; margin: 0 8px"><img src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756802843324_TWITTER_ICON_Group%201597883717.png" alt="Twitter" width="36" /></a>
+                      <a href="https://in.linkedin.com/company/mrproptek" style="text-decoration: none; margin: 0 8px"><img src="https://mrproptekbucket.s3.ap-south-1.amazonaws.com/1756797662425_LINKDIN_ICON_linkedin_icon.png" alt="LinkedIn" width="36" /></a>
+            
+      </div>
+      <p>© 2025 MrProptek. All rights reserved.</p>
+      <p>You are receiving this mail because you registered to join the Mr. Proptek platform as a user or a creator. This also shows that you agree to our Terms of Use and Privacy Policies.</p>
+      <p><a href="https://mrproptek.com/refund-policy">Privacy policy</a> • <a href="https://mrproptek.com/terms-and-conditions">Terms of service</a> • <a href="https://mrproptek.com/contact">Contact Us</a> </p>
+    </div>
+  </div>
+</body>
+</html>
